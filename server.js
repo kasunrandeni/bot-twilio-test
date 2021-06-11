@@ -38,7 +38,7 @@
  const MessagingResponse = require('twilio').twiml.MessagingResponse;
  const sessionClient = new dialogflowSessionClient(projectId);
  
- const listener = app.listen(process.env.PORT, function() {
+ const listener = app.listen(process.env.PORT || 3000, function() {
    console.log('Your Twilio integration server is listening on port '
 	   + listener.address().port);
  });
